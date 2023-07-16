@@ -12,16 +12,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/superior/config/common.mk)
 
-PRODUCT_NAME := arrow_surya
+PRODUCT_NAME := superior_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := M2007J20CG
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-# ArrowOS additions
-DEVICE_MAINTAINER := TheStrechh
-ARROW_GAPPS := true
