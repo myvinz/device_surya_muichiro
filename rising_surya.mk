@@ -11,13 +11,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from surya device
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
-# Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/superior/config/common.mk)
+# Inherit some common RisingOS stuff.
+$(call inherit-product, vendor/rising/config/common.mk)
 
-PRODUCT_NAME := superior_surya
+# RisingOs Flags
+RISING_CHIPSET := Snapdragon 732G
+RISING_MAINTAINER := Skyy | 私は空です
+WITH_GMS := false
+TARGET_CORE_GMS := true
+TARGET_ENABLE_BLUR := true
+SUSHI_BOOTANIMATION := 1080
+TARGET_ENABLE_PIXEL_FEATURES := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+
+PRODUCT_NAME := rising_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := M2007J20CG
 PRODUCT_MANUFACTURER := Xiaomi
-
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+TARGET_VENDOR_PRODUCT_NAME := lavender
